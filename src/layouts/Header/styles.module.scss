@@ -1,0 +1,86 @@
+@use '@/styles/_variable.scss' as mixin;
+
+.mainLayoutHeader {
+	background-color: black;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
+	.layoutLogo {
+		width: 3.75rem;
+		margin: 0 auto;
+	}
+}
+
+.mainMenu {
+	background-color: black;
+	// width: 43.75rem;
+	width: 100%;
+	.mainMenuItem {
+		color: #fff !important;
+	}
+}
+
+.mainLayoutUserBox {
+	bottom: 1.5rem;
+	padding: 0.25rem;
+	overflow: hidden;
+	display: flex;
+	cursor: pointer;
+	.userInformation {
+		margin: auto 0.625rem;
+		flex-direction: column;
+	}
+}
+
+.buttonLogoutWrapper {
+	background-color: #990000;
+	color: mixin.$txt-btn-confirm-color;
+	border: none;
+	border-radius: 0.25rem;
+}
+
+.mainContent {
+	// background-color: mixin.$primary-color ;
+	flex-grow: 1;
+	.mainLayoutContent {
+		overflow: initial;
+		margin: 1.5rem;
+		background-color: #fff;
+		padding: 1.25rem;
+		border-radius: 1rem;
+	}
+}
+
+.mainLayoutMobile {
+	display: block;
+}
+
+@media only screen and (max-width: 37.5rem) {
+	.mainLayoutMobile {
+		display: none;
+	}
+	.mainLayoutFooter {
+		position: unset;
+	}
+}
+
+@media only screen and (max-width: 100rem) {
+	.contentLogoImg {
+		width: 18.75rem;
+	}
+}
+
+@media only screen and (max-width: 31.25rem) {
+	.contentLogo {
+		margin-bottom: 3.125rem;
+	}
+}
+
+@media only screen and (max-width: 18.75rem) {
+	.contentLogo {
+		margin-bottom: 1.875rem;
+	}
+	.contentLogoImg {
+		width: 12.5rem;
+	}
+}
